@@ -1,7 +1,8 @@
 @import "tailwindcss";
+@import "bootstrap-icons/font/bootstrap-icons.css";
 
 :root {
-  --background: #ffffff;
+  --background: bg-white/10;
   --foreground: #171717;
 }
 
@@ -16,6 +17,17 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
   }
 }
 
