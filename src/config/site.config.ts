@@ -34,6 +34,16 @@ export interface Experience {
     type: ExperienceType;
 }
 
+export interface Project {
+    name: string;
+    type: string;
+    description: string;
+    tech: string[];
+    highlights: string[];
+    icon: string;
+    github: string | undefined;
+}
+
 export interface Skill {
     title: string;
     icon: string;
@@ -49,7 +59,9 @@ export interface Config {
     snapshot: Snapshot;
 
     experiences: Experience[];
+    projects: Project[];
     skills: Skill[];
+
 }
 
 export const config : Config = {
@@ -105,6 +117,54 @@ export const config : Config = {
                 "Led technical direction across backend architecture, frontend systems, and internal tooling.",
             ],
             type: ExperienceType.job,
+        },
+    ],
+
+    projects: [
+        {
+            name: "Mission Control",
+            type: "Control Plane API",
+            description: "A backend control-plane system for managing clients, projects, deployments, launch " +
+                "workflows, members, and operational state.",
+            tech: ["Go", "REST API", "PostgreSQL", "RBAC", "Deployment Orchestration"],
+            highlights: [
+                "Project and client management",
+                "Manual deployment triggers",
+                "Launch-to-production workflow",
+                "Role and permission modeling",
+            ],
+            icon: "bi-diagram-3",
+            github: undefined,
+        },
+        {
+            name: "Lunar Deploy Agent",
+            type: "Open Source Deployment Worker",
+            description: "A Go-based server agent that executes deployment jobs, exposes health endpoints, streams " +
+                "events, and reports deployment history.",
+            tech: ["Go", "Docker", "WebSockets", "Linux", "JSON Logging"],
+            highlights: [
+                "Deployment job engine",
+                "Queue and history endpoints",
+                "Health monitoring",
+                "Event streaming",
+            ],
+            icon: "bi-hdd-network",
+            github: "https://github.com/ogilcher/lunar-deploy-agent",
+        },
+        {
+            name: "LunaPal",
+            type: "Cross-Platform Life Management App",
+            description:
+                "A life-management platform with mobile-first architecture, backend services, authentication, and modular product areas.",
+            tech: ["SwiftUI", "FastAPI", "Supabase", "PostgreSQL", "Auth"],
+            highlights: [
+                "Coordinator-based iOS architecture",
+                "Backend API planning",
+                "Secure user data model",
+                "Cross-platform roadmap",
+            ],
+            icon: "bi-stars",
+            github: undefined,
         },
     ],
 

@@ -1,8 +1,9 @@
-// src/data/navigation.ts
-
 export const navigationLinks = [
+    { label: 'Home', href: '#hero' },
     { label: "About", href: "#about" },
-    { label: "Projects", href: "#projects" },
     { label: "Experience", href: "#experience" },
+    { label: "Projects", href: "#projects" },
+    { label: "Philosophy", href: "#philosophy" },
+    { label: "Skills", href: "#skills" },
     { label: "Contact", href: "#contact" },
 ];

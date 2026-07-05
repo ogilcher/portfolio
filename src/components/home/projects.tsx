@@ -1,49 +1,4 @@
-// src/components/home/projects.tsx
-
-const projects = [
-    {
-        name: "Mission Control",
-        type: "Control Plane API",
-        description:
-            "A backend control-plane system for managing clients, projects, deployments, launch workflows, members, and operational state.",
-        tech: ["Go", "REST API", "PostgreSQL", "RBAC", "Deployment Orchestration"],
-        highlights: [
-            "Project and client management",
-            "Manual deployment triggers",
-            "Launch-to-production workflow",
-            "Role and permission modeling",
-        ],
-        icon: "bi-diagram-3",
-    },
-    {
-        name: "Lunar Deploy Agent",
-        type: "Open Source Deployment Worker",
-        description:
-            "A Go-based server agent that executes deployment jobs, exposes health endpoints, streams events, and reports deployment history.",
-        tech: ["Go", "Docker", "WebSockets", "Linux", "JSON Logging"],
-        highlights: [
-            "Deployment job engine",
-            "Queue and history endpoints",
-            "Health monitoring",
-            "Event streaming",
-        ],
-        icon: "bi-hdd-network",
-    },
-    {
-        name: "LunaPal",
-        type: "Cross-Platform Life Management App",
-        description:
-            "A life-management platform with mobile-first architecture, backend services, authentication, and modular product areas.",
-        tech: ["SwiftUI", "FastAPI", "Supabase", "PostgreSQL", "Auth"],
-        highlights: [
-            "Coordinator-based iOS architecture",
-            "Backend API planning",
-            "Secure user data model",
-            "Cross-platform roadmap",
-        ],
-        icon: "bi-stars",
-    },
-];
+import { config } from "@/config/site.config"
 
 export function Projects() {
     return (
@@ -63,7 +18,7 @@ export function Projects() {
                 </div>
 
                 <div className="grid gap-8">
-                    {projects.map((project) => (
+                    {config.projects.map((project) => (
                         <article
                             key={project.name}
                             className="group overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.05] shadow-xl backdrop-blur transition hover:-translate-y-1 hover:bg-white/[0.08]"
@@ -116,14 +71,16 @@ export function Projects() {
                                             View Case Study
                                         </a>
 
-                                        <a
-                                            href="https://github.com/olivergilcher"
-                                            target="_blank"
-                                            rel="noreferrer"
-                                            className="rounded-full border border-white/10 px-5 py-2.5 font-semibold text-white/70 transition hover:bg-white hover:text-neutral-900"
-                                        >
-                                            GitHub
-                                        </a>
+                                        {project.github !== undefined && (
+                                            <a
+                                                href={project.github}
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                className="rounded-full border border-white/10 px-5 py-2.5 font-semibold text-white/70 transition hover:bg-white hover:text-neutral-900"
+                                            >
+                                                GitHub
+                                            </a>
+                                        )}
                                     </div>
                                 </div>
                             </div>
