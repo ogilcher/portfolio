@@ -1,15 +1,11 @@
 # Oliver Gilcher - Engineering Portfolio
 
----
-
 Source code for [olivergilcher.com](https://olivergilcher.com), my personal software engineering portfolio.
 
 The portfolio showcases selected work across backend engineering, platform tooling, systems development, application
 architecture, and software infrastructure.
 
 ## Featured Work
-
----
 
 ### Lunar Deploy Agent
 
