@@ -1,35 +1,93 @@
-# Oliver Gilcher portfolio — Marriott-targeted build
+# Oliver Gilcher - Engineering Portfolio
 
-A dark liquid-glass portfolio optimized for fast recruiter scanning, mobile/browser resilience, and deeper engineering case studies.
+---
 
-## What this build emphasizes
+Source code for [olivergilcher.com](https://olivergilcher.com), my personal software engineering portfolio.
 
-- Real-time integration, REST/JSON APIs, event-driven systems, web/mobile engineering, data, validation, and operational thinking.
-- Lunar Deploy Agent is the lead case study because it is the strongest direct evidence for real-time/event-driven integration work.
-- Case studies include a dedicated **Receipts** section with concrete implementation evidence instead of architecture claims alone.
-- Launchpad is described using the currently supported implementation details: Go, REST/JSON, SQL/SQLite migrations, node registration/heartbeat, queued deployments, and agent callbacks.
-- Experience titles and dates match the Marriott-targeted résumé.
-- The Stack page separates integration/events, data, languages, web/mobile, backend/platform, and validation/operations.
-- The résumé CTA is wired to `public/resume.pdf` and the final Marriott résumé is included in this package.
+The portfolio showcases selected work across backend engineering, platform tooling, systems development, application
+architecture, and software infrastructure.
 
-## Routes
+## Featured Work
 
-- `/`
-- `/work`
-- `/work/lunar-deploy-agent`
-- `/work/launchpad`
-- `/work/lunapal`
-- `/work/swiftui-navigation-coordinator`
-- `/experience`
-- `/stack`
-- `/contact`
+---
 
-## Local validation
+### Lunar Deploy Agent
 
-```bash
+Deployment orchestration and infrastructure tooling written in Go.
+
+Built around REST APIs, WebSockets, deployment queues, application health monitoring, automated pipelines
+authentication, and failure handling.
+
+### Launchpad
+
+Internal operations and deployment tooling developed for LunarLabs.
+
+Designed to bring application management, deployment workflows, system visibility, and engineering operations into a
+centralized interface.
+
+### LunaPal
+
+A full-stack life-management application with an emphasis on modular architecture, privacy, and secure data access.
+
+Built across SwiftUI, FastAPI, PostgreSQL, Supabase, and cloud infrastructure.
+
+### SwiftUI Navigation Coordinator
+
+A scalable navigation architecture for SwiftUI applications using centralized coordination and type-safe routing.
+
+The project explores separation of navigation state from view construction while supporting increasingly complex
+application flows.
+
+## Stack
+
+The portfolio itself is built with:
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Vercel
+
+Projects featured throughout the site additionally include technologies such as Go, C++, C, Python, Swift, FastAPI,
+PostgreSQL, Supabase, Docker, WebSockets, REST APIs, and Linux.
+
+## Design
+
+The site is designed around a dark, minimal interface with translucent glass-inspired surfaces, responsive navigation,
+and project-focused case studies. 
+
+Rather than functioning as a traditional résumé websit, the portfolio is intended to show how I approach engineering
+problems, architectural decisions, implementation, and shipping software.
+
+## Development
+
+Install dependencies (choose between bun or npm)
+
+```shell
+bun install
+bun run dev
+```
+
+```shell
 npm install
-npm run build
 npm run dev
 ```
 
-Then run through `BROWSER-QA.md` before deployment.
+Then open:
+`http://localhost:3000`
+
+## Deployment
+
+The portfolio is deployed through the same internal deployment infrastructure developed at LunarLabs.
+
+It is managed through `Launchpad`, LunarLabs' internal operations and deployment interface, with deployments executed
+and monitored by the Lunar Deploy Agent.
+
+This makes the portfolio both a public-facing engineering portfolio and a production workload used to exercise the
+deployment tooling I am building.
+
+The deployment workflow includes:
+- Application registration and configuration through Launchpad
+- Automated deployment execution through Lunar Deploy Agent
+- Build and process management
+- Deployment status and health monitoring
+- Operational visibility through the Luanchpad interface.
